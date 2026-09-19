@@ -33,7 +33,7 @@ export function buttonStyles({
   className?: string
 } = {}) {
   return cn(
-    'group inline-flex shrink-0 items-center justify-center whitespace-nowrap font-semibold transition-[background-color,border-color,box-shadow,color,transform] duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 active:translate-y-px active:scale-[0.98]',
+    'button-sheen group inline-flex shrink-0 items-center justify-center whitespace-nowrap font-semibold transition-[background-color,border-color,box-shadow,color,transform] duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 active:translate-y-px active:scale-[0.98]',
     variantStyles[variant],
     sizeStyles[size],
     className,

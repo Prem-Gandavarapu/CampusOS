@@ -30,3 +30,15 @@ If you are developing a production application, we recommend enabling type-aware
 ```
 
 See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+
+## PostgreSQL authentication
+
+CampusOS now includes a small server-side PostgreSQL auth layer. Copy `.env.example` to `.env.local` (or configure the same variables in your deployment), then run:
+
+```bash
+npm run db:migrate
+npm run db:seed-admin
+npm run dev
+```
+
+`DATABASE_URL` points to PostgreSQL and `JWT_SECRET` must be at least 32 characters. The seed command creates the administrator account from `ADMIN_EMAIL` and `ADMIN_PASSWORD`. The `/api/admin/students` endpoints require an authenticated admin session; student accounts cannot create or delete users.

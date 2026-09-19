@@ -117,12 +117,11 @@ export type CampusIntelItem = {
 }
 
 export const campusIntelItems: CampusIntelItem[] = [
-  { id: 'gist-results', category: 'Examination Results', title: 'B.Tech Regular & Supplementary Examinations – April/May 2026 Results', date: '18 Jun 2026', isNew: true, sourceUrl: 'https://gist.edu.in/gist/wp-content/uploads/2026/06/B.Tech-Regular-and-Supplementary-April-May-2026-Examinations-Results.pdf' },
-  { id: 'gist-timetable', category: 'Examination Timetable', title: 'M.Tech I & II Semester Regular and Supplementary Examinations – August 2026 Time Tables', date: 'Today', isNew: true, sourceUrl: 'https://gist.edu.in/gist/gist-home/' },
-  { id: 'gist-notification', category: 'Academic Notification', title: 'I B.Tech I & II Semester Regular and Supplementary Examinations – May 2026 Results Declaration', date: 'Today', isNew: true, sourceUrl: 'https://gist.edu.in/gist/gist-home/' },
-  { id: 'gist-circular', category: 'Circular', title: 'B.Tech Regular and Supplementary April–May 2026 Examinations – RC-CV Circular', date: 'Today', isNew: true, sourceUrl: 'https://gist.edu.in/gist/gist-home/' },
+  { id: 'gist-results', category: 'Examination Results', title: 'B.Tech Regular & Supplementary Examinations - April/May 2026 Results', date: 'June 2026', isNew: true, sourceUrl: 'https://gist.edu.in/gist/wp-content/uploads/2026/06/B.Tech-Regular-and-Supplementary-April-May-2026-Examinations-Results.pdf' },
+  { id: 'gist-timetable', category: 'Examination Timetable', title: 'M.Tech I & II Semester PRG25 Regular and Supplementary Examinations - August 2026 Time Tables', date: 'August 2026', isNew: true, sourceUrl: 'https://gist.edu.in/gist/wp-content/uploads/2026/08/M.Tech-I-II-Semester-PRG25-Regular-and-Supplementary-Examinations-Aug-2026-Time-Tables.pdf' },
+  { id: 'gist-notification', category: 'Academic Notification', title: 'I B.Tech I & II Semester RG23 Regular and Supplementary Examinations - May 2026 Results Declaration', date: 'July 2026', isNew: true, sourceUrl: 'https://gist.edu.in/gist/wp-content/uploads/2026/07/I-B.Tech-I-II-Semester-RG23-Regular-and-Supplementary-Examinations-May-2026-Results-Declaration.pdf' },
+  { id: 'gist-circular', category: 'Circular', title: 'B.Tech Regular and Supplementary April-May 2026 Examinations - RC-CV Circular', date: 'June 2026', isNew: true, sourceUrl: 'https://gist.edu.in/gist/wp-content/uploads/2026/06/B.Tech-Regular-and-Supplementary-April-May-2026-Examinations-RC-CV-Circular.pdf' },
 ]
-
 export const initialComplaints: Complaint[] = [
   { id: 'CMP-2087', title: 'Projector not working in CSE Lab', category: 'Infrastructure', priority: 'High', department: 'Academic Services', authority: 'CSE Infrastructure Coordinator', sla: '2 hours', status: 'In review', submittedOn: 'Today · 9:18 AM', location: 'CSE Lab 204', impact: 42, confidence: 96 },
   { id: 'CMP-2084', title: 'Wi‑Fi unavailable in Block B', category: 'Network & IT', priority: 'Medium', department: 'Campus IT', authority: 'Network Operations', sla: '24 hours', status: 'In review', submittedOn: '17 Sep · 2:24 PM', location: 'Block B · 2nd floor', impact: 18, confidence: 91 },

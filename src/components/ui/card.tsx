@@ -17,7 +17,7 @@ export function Card({ className, children, interactive = false, tone = 'default
   return (
     <section
       className={cn(
-        'surface-reflection relative rounded-[1.125rem] border p-5 transition-[border-color,box-shadow,transform,background-color] duration-200 ease-out sm:p-6',
+        'surface-reflection relative rounded-[1.125rem] border p-5 transition-[border-color,box-shadow,transform,background-color] duration-300 ease-out sm:p-6',
         tones[tone],
         interactive && 'cursor-pointer hover:-translate-y-0.5 hover:scale-[1.005] hover:border-border-strong hover:shadow-card-hover active:scale-[.995] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
         className,
