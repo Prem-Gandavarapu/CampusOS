@@ -33,10 +33,10 @@ export function LoginPage() {
     }
   }
 
-  return <main className="page-glow noise-overlay relative grid min-h-screen place-items-center overflow-hidden px-4 py-8 sm:px-6 sm:py-12">
+  return <main className="page-glow noise-overlay relative flex min-h-[100svh] min-h-[100dvh] items-center justify-center overflow-y-auto px-4 py-6 sm:px-6 sm:py-10">
     <div aria-hidden="true" className="pointer-events-none absolute -left-24 top-1/4 size-72 rounded-full bg-brand/[.08] blur-3xl" />
     <div aria-hidden="true" className="pointer-events-none absolute -right-24 bottom-1/4 size-80 rounded-full bg-brand-secondary/[.08] blur-3xl" />
-    <section className="liquid-glass relative w-full max-w-[520px] rounded-[2rem] border border-white/70 px-6 py-7 shadow-float sm:px-10 sm:py-10">
+    <section className="liquid-glass relative w-full max-w-[520px] rounded-[2rem] border border-white/70 px-6 py-8 shadow-float sm:px-10 sm:py-10">
       <div className="relative">
         <div className="flex items-center justify-between gap-4">
           <AppLogo />

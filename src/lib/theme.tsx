@@ -26,7 +26,11 @@ function getSystemTheme(): ResolvedTheme {
 }
 
 function getInitialTheme(): Theme {
-  return 'light'
+  try {
+    const saved = window.localStorage.getItem(storageKey)
+    if (saved === 'light' || saved === 'dark' || saved === 'system') return saved
+  } catch {}
+  return 'system'
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
@@ -48,7 +52,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   }, [resolvedTheme])
 
   const setTheme = useCallback((nextTheme: Theme) => {
-    window.localStorage.setItem(storageKey, nextTheme)
+    try { window.localStorage.setItem(storageKey, nextTheme) } catch {}
     setThemeState(nextTheme)
   }, [])
 

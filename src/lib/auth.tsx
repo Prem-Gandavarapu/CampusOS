@@ -13,12 +13,17 @@ type AuthContextValue = {
 
 const AuthContext = createContext<AuthContextValue | null>(null)
 const authKey = ['auth', 'me']
+async function readJson<T>(response: Response): Promise<T | null> {
+  const text = await response.text()
+  if (!text) return null
+  try { return JSON.parse(text) as T } catch { return null }
+}
 
 async function loadCurrentUser() {
   const response = await fetch('/api/auth/me')
   if (!response.ok) return null
-  const data = await response.json() as { user: AuthUser }
-  return data.user
+  const data = await readJson<{ user?: AuthUser }>(response)
+  return data?.user ?? null
 }
 
 export function AuthProvider({ children }: { children: ReactNode }) {
@@ -34,8 +39,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
       })
-      const data = await response.json() as { user?: AuthUser; error?: string }
-      if (!response.ok || !data.user) throw new Error(data.error || 'Unable to sign in.')
+      const data = await readJson<{ user?: AuthUser; error?: string }>(response)
+      if (!response.ok || !data?.user) throw new Error(data?.error || ('Sign-in failed (' + response.status + '). The authentication service did not return JSON.'))
       queryClient.setQueryData(authKey, data.user)
       return data.user
     },
