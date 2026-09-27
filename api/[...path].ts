@@ -26,7 +26,7 @@ async function readBody(req: VercelRequest) {
 export default async function handler(req: VercelRequest, res: ServerResponse) {
   try {
     const pathname = new URL(req.url || '/', 'http://localhost').pathname
-    if (pathname.startsWith('/api/auth/') || pathname.startsWith('/api/admin/')) {
+    if (pathname.startsWith('/api/auth/') || pathname.startsWith('/api/admin/') || pathname.startsWith('/api/complaints') || pathname === '/api/register') {
       const handled = await handleAuthRequest(req, res)
       if (handled !== false) return
     }

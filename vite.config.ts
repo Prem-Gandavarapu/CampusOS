@@ -9,7 +9,7 @@ function campusRagChat(): Plugin {
     name: 'campusos-rag-chat',
     configureServer(server) {
       server.middlewares.use(async (req, res, next) => {
-        if (req.url?.startsWith('/api/auth/') || req.url?.startsWith('/api/admin/')) {
+        if (req.url?.startsWith('/api/auth/') || req.url?.startsWith('/api/admin/') || req.url?.startsWith('/api/complaints') || req.url === '/api/register') {
           const handled = await handleAuthRequest(req, res)
           if (handled !== false) return
         }

@@ -55,7 +55,7 @@ export function LoginPage() {
           <Button className="group w-full justify-between" disabled={submitting} loading={submitting} size="lg" type="submit"><span className="flex items-center gap-2"><GraduationCap className="size-4" />{submitting ? 'Signing in...' : 'Sign in to CampusOS'}</span><ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" /></Button>
         </form>
         <div className="mt-6 flex flex-col gap-3 border-t border-border/70 pt-5 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-xs text-muted-foreground">One secure sign-in for every CampusOS workspace.</p>
+          <div><p className="text-xs text-muted-foreground">One secure sign-in for every CampusOS workspace.</p><Link className="mt-2 inline-flex text-sm font-semibold text-brand" to="/register">Register as Student <ArrowRight className="ml-1 size-3.5" /></Link></div>
           <Link className="inline-flex text-sm font-semibold text-brand transition-colors hover:text-brand-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" to="/">Back home</Link>
         </div>
       </div>
